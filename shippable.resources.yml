@@ -1,1 +1,22 @@
-
+resources:
+  - name: publicgitrepo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: shiptest-rc-ow/sample-script-3
+      branch: master
+      
+  - name: op
+    type: dockerOptions
+    version:
+      memory: 64
+      cpuShares: 8
+      portMappings:
+        - "80:80"
+      
+  - name: privategitrepo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: shiptest-rc-ow/coretest_prbuildprivate
+      branch: master
