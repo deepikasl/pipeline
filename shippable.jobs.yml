@@ -1,1 +1,54 @@
-
+jobs:  
+  - name: run1
+    type: runSh
+    serial: false
+    steps:
+      - IN: publichgitrepo
+      - IN: t1
+      - TASK:
+        - script: ./IN/publicgitrepo/gitRepo/echo.sh
+        #- script: pwd
+        #- script: ls
+        - script: echo 'testrunSh'
+        - script: export FOO=bar
+        - script: export FOO1=bar1
+        - script: echo $FOO && echo $FOO1
+    
+    on_start:
+      - NOTIFY: mySlackS1
+      - NOTIFY: myEmailS1
+      - script: echo 'y1'
+    on_success:
+    #   #- uname -a
+     # - NOTIFY: myEmailS1
+     # - NOTIFY: mySlackS1
+      - script: echo 'infra test'
+      - script: pwd
+      - script: ls
+      - script: echo 'newtesting success'
+      - script: echo 'testing'
+    # # - script: ./IN/sample-script-3/gitRepo/echo.sh
+    on_failure:
+      - script: echo 'testing1 failure'
+      - script: echo 'failure runSh'
+      - script: pwd
+      - script: ls
+     # - NOTIFY: mySlackS1
+    always:
+      - script: echo "This works"
+      - NOTIFY: myEmailS1
+      - NOTIFY: mySlackS1 
+      
+  
+      
+  - name: run2
+    type: runSh
+   # serial: false
+    steps:
+      - IN: privategitrepo
+       # switch: off
+      - IN: t1
+      #- OUT: testallpl-ecsdeploy67
+     # - IN: run1
+      - TASK:
+        - script: ./IN/privategitrepo/gitRepo/echo.sh
