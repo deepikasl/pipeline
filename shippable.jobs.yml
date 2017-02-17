@@ -3,7 +3,7 @@ jobs:
     type: runSh
     serial: false
     steps:
-      - IN: publichgitrepo
+      - IN: publicgitrepo
       - IN: t1
       - TASK:
         - script: ./IN/publicgitrepo/gitRepo/echo.sh
