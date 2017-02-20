@@ -53,3 +53,4 @@ jobs:
      # - IN: run1
       - TASK:
         - script: ./IN/privategitrepo/gitRepo/echo.sh
+      - OUT: image
