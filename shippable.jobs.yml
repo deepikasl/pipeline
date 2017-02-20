@@ -6,7 +6,7 @@ jobs:
       - IN: publicgitrepo
       - IN: t1
       - TASK:
-        - script: ./IN/publicgitrepo/gitRepo/echo.sh
+       # - script: ./IN/publicgitrepo/gitRepo/echo.sh
         #- script: pwd
         #- script: ls
         - script: echo 'testrunSh'
