@@ -20,3 +20,11 @@ resources:
     pointer:
       sourceName: shiptest-rc-ow/coretest_prbuildprivate
       branch: master
+      
+  - name: image
+    type: image
+    integration: ship-docker-1
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.1"
