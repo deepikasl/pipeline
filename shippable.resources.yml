@@ -39,9 +39,8 @@ resources:
     version:
       params:
         TEST: rc
-        #DEV: alpha
-        secure: nmMxIxBH80npCITAlsy+cwIAvvAyXW4R62ZhO5xPzXV/LdndyNPlhhX7tCAdo/ZMs17LZQCYTsYfW8ThCugrTE4arDL148bpSU864WHeQ6BWPNnqFfUNDHcHfQyJhbyTxFXnXjXGRSYmpKu980VxbMUO1KHMdofU6dI5qs1WG5iy7dyNkOmAyxxFWSpr+SKS9SxbtVHqDwTawPLQBGhg98xbL0NNHZ6QEpdXI3KPfmXa1cx3tP4r+EahjICrli5q++4yOkyUaylAPEXWcnxMsq9CjNL9PTYC9M9ASi1IGz3BT5BQWki9Wj6mHuUmnBnCpfEQGTkB0ZbvkxQPBCOnpg==
-
+        secure: Ht2MA4+5bYihYzLIFJe4bANBXlFp8ITXapWXs8g+1CkjSNXbeJBKyUxgf0xbjNPWmtMYr7VHgiyXvCEvaV97wxFcG5Ru4fF96m+Q5s7ti58UB1o1fP/koO4DhSpBdq0V3LZSy9pfbuF2IaC9uWJCOe6H4KnwyTZF5y6AjGKJcRLcFFPyHtvDL0kmoiUOs0DTfCxj9ztiRjBjvqVbQU5Jshd1jWP7G7Gw7TrzBT8rC+8bLWvhS7vHkc2rYiaqp5cGOVLKwl3s2++2fz7OhX3yOn/2XJhKpg4e8y+1g7aTBiuk4aWK3gn6NteVNSocK8/ymgioDKH88foCDuVhoX6y2g== #DEV: alpha
+        
   - name: notify-slack
     type: notification
     integration: "notify-slack"
