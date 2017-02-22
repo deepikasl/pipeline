@@ -57,3 +57,31 @@ resources:
       recipients: 
         - shiptest.rc.ow@gmail.com
         - shiptest.rc.me@gmail.com
+
+  - name: ship_aws_cli
+    type: cliConfig
+    integration: "ship-aws"
+    
+  - name: ship_gke_cli
+    type: cliConfig
+    integration: "ship-gke"
+    
+  - name: ship_dcl_cli
+    type: cliConfig
+    integration: "ship-dcl"
+    
+  - name: ship_tripub_cli
+    type: cliConfig
+    integration: "ship-tripub"
+    
+  - name: ship_ecr_cli
+    type: cliConfig
+    integration: "ship-ecr"
+    
+  - name: ship_gcr_cli
+    type: cliConfig
+    integration: "ship-gcr"
+    
+  - name: ship_quay_cli
+    type: cliConfig
+    integration: "ship-quay"
