@@ -9,10 +9,18 @@ jobs:
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/testscript.sh
       - OUT: test_out_img
+
+  - name: runsh-pre_jobscript
+    type: runSh
+    steps:
+      - IN: pipeline_scriptRepo
+      - IN: runsh-script
+      - TASK:
+        - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh
     on_start:
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
-      - script: echo 'y1'
+      - script: echo 'it is for on_satrt'
     on_success:      
       - script: echo 'test in on_success'
       - script: ls
@@ -30,4 +38,3 @@ jobs:
       - script: echo "This works on_always"
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
-
