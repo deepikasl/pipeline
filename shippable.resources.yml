@@ -1,30 +1,36 @@
 resources:
-  - name: publicgitrepo
+  - name: pipeline_scriptRepo
     type: gitRepo
     integration: github
     pointer:
-      sourceName: shiptest-rc-ow/sample-script-3
+      sourceName: shiptest-rc-ow/pipeline_scripts
       branch: master
-      
-  - name: op
-    type: dockerOptions
-    version:
-      memory: 64
-      cpuShares: 8
-      portMappings:
-        - "80:80"
-      
-  - name: privategitrepo
-    type: gitRepo
-    integration: github
-    pointer:
-      sourceName: shiptest-rc-ow/coretest_prbuildprivate
-      branch: master
-      
-  - name: image
+     
+  - name: test_out_img
     type: image
-    integration: ship-docker-1
+    integration: ship-docker
     pointer:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.1"
+            
+  - name: ship_dh
+    type: integration
+    integration: "ship-docker"
+
+  - name: ship_dh_cli
+    type: cliConfig
+    integration: "ship-docker"
+    
+  - name: ship_aws
+    type: integration
+    integration: "ship-aws"
+
+  - name: test_params
+    type: params
+    version:
+      params:
+        TEST: rc
+        #DEV: alpha
+        secure: nmMxIxBH80npCITAlsy+cwIAvvAyXW4R62ZhO5xPzXV/LdndyNPlhhX7tCAdo/ZMs17LZQCYTsYfW8ThCugrTE4arDL148bpSU864WHeQ6BWPNnqFfUNDHcHfQyJhbyTxFXnXjXGRSYmpKu980VxbMUO1KHMdofU6dI5qs1WG5iy7dyNkOmAyxxFWSpr+SKS9SxbtVHqDwTawPLQBGhg98xbL0NNHZ6QEpdXI3KPfmXa1cx3tP4r+EahjICrli5q++4yOkyUaylAPEXWcnxMsq9CjNL9PTYC9M9ASi1IGz3BT5BQWki9Wj6mHuUmnBnCpfEQGTkB0ZbvkxQPBCOnpg==
+
