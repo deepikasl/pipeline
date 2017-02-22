@@ -44,7 +44,7 @@ resources:
 
   - name: notify-slack
     type: notification
-    integration: "ship-slack"
+    integration: "notify-slack"
     pointer:
       recipients:
         - "#rc-public" 
