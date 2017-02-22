@@ -5,14 +5,22 @@ resources:
     pointer:
       sourceName: shiptest-rc-ow/pipeline_scripts
       branch: master
-     
-  - name: test_out_img
+
+  - name: sample_img
     type: image
     integration: ship-docker
     pointer:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.1"
+      
+  - name: test_out_img
+    type: image
+    integration: ship-docker
+    pointer:
+      sourceName: ""shippabledocker/ship_plv2node""
+    seed:
+      versionName: "latest"
             
   - name: ship_dh
     type: integration
