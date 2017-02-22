@@ -3,7 +3,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: shiptest-rc-ow/pipeline_scripts
+      sourceName: "shiptest-rc-ow/pipeline_scripts"
       branch: master
 
   - name: sample_img
@@ -18,7 +18,7 @@ resources:
     type: image
     integration: ship-docker
     pointer:
-      sourceName: ""shippabledocker/ship_plv2node""
+      sourceName: "shippabledocker/ship_plv2node"
     seed:
       versionName: "latest"
             
