@@ -12,16 +12,16 @@ jobs:
 
   - name: runsh-pre_jobscript
     type: runSh
-    steps:
+    on_start:
+      - NOTIFY: notify-slack
+      - NOTIFY: notify-email
+      - script: echo 'it is for on_start'
+    steps:    
       - IN: pipeline_scriptRepo
         switch: off
       - IN: runsh-script        
       - TASK:
-        - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh
-    on_start:
-      - NOTIFY: notify-slack
-      - NOTIFY: notify-email
-      - script: echo 'it is for on_satrt'
+        - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh    
     on_success:      
       - script: echo 'test in on_success'
       - script: ls
@@ -39,3 +39,19 @@ jobs:
       - script: echo "This works on_always"
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
+
+  - name: runcli-script
+    type: runSh
+    steps:
+      - IN: pipeline_scriptRepo
+        switch: off     
+      - IN: ship_dh_cli
+      - IN: ship_aws_cli
+      - IN: ship_gke_cli
+      - IN: ship_dcl_cli
+      - IN: ship_ecr_cli
+      - IN: ship_gcr_cli
+      - IN: ship_quay_cli
+      - TASK:
+        - script: ./IN/pipeline_scriptRepo/gitRepo/runcli/accInt.sh
+        
