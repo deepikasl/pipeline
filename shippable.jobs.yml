@@ -1,5 +1,5 @@
 jobs:  
-  - name: runsh_script
+  - name: runshscript
     type: runSh
     steps:
       - IN: pipeline_scriptRepo
@@ -19,7 +19,7 @@ jobs:
     steps:    
       - IN: pipeline_scriptRepo
         switch: off
-      - IN: runsh_script        
+      - IN: runshscript        
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh    
     on_success:      
