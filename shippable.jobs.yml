@@ -1,5 +1,5 @@
 jobs:  
-  - name: runsh-script
+  - name: runsh_script
     type: runSh
     steps:
       - IN: pipeline_scriptRepo
@@ -10,7 +10,7 @@ jobs:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/testscript.sh
       - OUT: test_out_img
 
-  - name: runsh-pre_jobscript
+  - name: runsh_pre_jobscript
     type: runSh
     on_start:
       - NOTIFY: notify-slack
