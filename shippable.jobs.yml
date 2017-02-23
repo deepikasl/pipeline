@@ -19,7 +19,7 @@ jobs:
     steps:    
       - IN: pipeline_scriptRepo
         switch: off
-      - IN: runsh-script        
+      - IN: runsh_script        
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh    
     on_success:      
