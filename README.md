@@ -1,5 +1,7 @@
 ### This to test pipeline workflows. Test cases that covers runsh and runcli test cases:
 
+#### gitrepo resource project link https://github.com/shiptest-rc-ow/pipeline_scripts
+
 #### runSh job environment variable:
 
 - RESOURCE_ID
