@@ -27,18 +27,14 @@ jobs:
       - script: ls
       - script: echo 'it is success'
     # # - script: ./IN/sample-script-3/gitRepo/echo.sh
-      - NOTIFY: notify-slack
-      - NOTIFY: notify-email
     on_failure:
       - script: echo 'testing1 failure'      
       - script: pwd
       - script: echo 'OOPS on_failure :('
+    always:
+      - script: echo "This works on_always"
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
-  #  always:
-     # - script: echo "This works on_always"
-     # - NOTIFY: notify-slack
-     # - NOTIFY: notify-email
 
   - name: runcli-script
     type: runSh
