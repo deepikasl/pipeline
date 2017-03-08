@@ -28,6 +28,11 @@ resources:
     pointer:
       sourceName : "nothing"
       
+  - name: ddc_dopts
+    type: dockerOptions
+    version:
+      memory: 128
+      
   - name: test_out_img
     type: image
     integration: ship-docker
