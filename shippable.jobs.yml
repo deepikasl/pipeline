@@ -55,3 +55,15 @@ jobs:
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runcli/accInt.sh
         
+  - name: manifest_dep
+    type: manifest
+    steps:
+      - IN: deploy_img       
+      
+  - name: deploy_ddc
+    type: deploy
+    steps:
+      - IN: manifest_dep
+      - IN: ddc_cluster
+      - IN: ddc_dopts
+      - TASK: managed
