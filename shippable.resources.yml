@@ -22,6 +22,12 @@ resources:
     seed:
       versionName: "deploy.2"
       
+  - name: ddc_cluster
+    type: cluster
+    integration: ship-ddc
+    pointer:
+      sourceName : "nothing"
+      
   - name: test_out_img
     type: image
     integration: ship-docker
