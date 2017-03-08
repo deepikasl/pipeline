@@ -35,10 +35,10 @@ jobs:
       - script: echo 'OOPS on_failure :('
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
-    always:
-      - script: echo "This works on_always"
-      - NOTIFY: notify-slack
-      - NOTIFY: notify-email
+  #  always:
+     # - script: echo "This works on_always"
+     # - NOTIFY: notify-slack
+     # - NOTIFY: notify-email
 
   - name: runcli-script
     type: runSh
