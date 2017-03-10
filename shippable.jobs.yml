@@ -62,5 +62,4 @@ jobs:
       - IN: manifest_dep
       - IN: ddc_cluster
       - IN: ddc_dopts
-      - IN: deploy_img
       - TASK: managed
