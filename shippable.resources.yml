@@ -78,7 +78,9 @@ resources:
   - name: ship_ecr_cli
     type: cliConfig
     integration: "ship-ecr"
-    
+    pointer:
+      region: "us-east-1"
+      
   - name: ship_aws_cli
     type: cliConfig
     integration: "ship-aws"
