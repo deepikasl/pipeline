@@ -36,7 +36,7 @@ jobs:
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
 
-  - name: runcli-script2
+  - name: runcli-script
     type: runCLI
     steps:
       - IN: pipeline_scriptRepo   
