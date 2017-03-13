@@ -43,7 +43,6 @@ jobs:
       - IN: ship_dh_cli
       - IN: ship_aws_cli
       - IN: ship_gke_cli
-      - IN: ship_dcl_cli
       - IN: ship_ecr_cli
       - IN: ship_gcr_cli
       - IN: ship_quay_cli
