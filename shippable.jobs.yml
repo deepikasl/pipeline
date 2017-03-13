@@ -47,7 +47,7 @@ jobs:
       - IN: ship_gcr_cli
       - IN: ship_quay_cli
       - TASK:
-        - script: ./IN/pipeline_scriptRepo/gitRepo/runcli/accInt.sh
+        - script: ./IN/pipeline_scriptRepo/gitRepo/runcli/accInt.sh 
         
   - name: manifest_dep
     type: manifest
