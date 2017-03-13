@@ -80,7 +80,7 @@ resources:
   - name: ship_aws_cli
     type: cliConfig
     integration: "ship-aws"
-      region: us-east-1
+      region: "us-east-1"
     
   - name: ship_gke_cli
     type: cliConfig
