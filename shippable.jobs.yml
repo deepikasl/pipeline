@@ -37,7 +37,7 @@ jobs:
       - NOTIFY: notify-email
 
   - name: runcli-script
-    type: runSh
+    type: runCLI
     steps:
       - IN: pipeline_scriptRepo
         switch: off     
