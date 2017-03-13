@@ -44,7 +44,7 @@ resources:
   - name: ship_dh
     type: integration
     integration: "ship-docker"
-
+      
   - name: ship_dh_cli
     type: cliConfig
     integration: "ship-docker"
@@ -80,10 +80,13 @@ resources:
   - name: ship_aws_cli
     type: cliConfig
     integration: "ship-aws"
+      region: us-east-1
     
   - name: ship_gke_cli
     type: cliConfig
     integration: "ship-gke"
+      sourceName: "small-cluster"
+      region: "us-east1-d"
     
   - name: ship_dcl_cli
     type: cliConfig
