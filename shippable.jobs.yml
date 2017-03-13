@@ -39,8 +39,7 @@ jobs:
   - name: runcli-script2
     type: runCLI
     steps:
-      - IN: pipeline_scriptRepo
-        switch: off     
+      - IN: pipeline_scriptRepo   
       - IN: ship_dh_cli
       - IN: ship_aws_cli
       - IN: ship_gke_cli
