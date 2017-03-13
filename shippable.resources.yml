@@ -45,9 +45,7 @@ resources:
     type: integration
     integration: "ship-docker"
       
-  - name: ship_dh_cli
-    type: cliConfig
-    integration: "ship-docker"
+  
     
   - name: ship_aws
     type: integration
@@ -76,12 +74,24 @@ resources:
       recipients: 
         - shiptest.rc.ow@gmail.com
         - shiptest.rc.me@gmail.com
-
+  
+  - name: ship_ecr_cli
+    type: cliConfig
+    integration: "ship-ecr"
+    
   - name: ship_aws_cli
     type: cliConfig
     integration: "ship-aws"
     pointer:
       region: "us-east-1"
+  
+  - name: ship_dh_cli
+    type: cliConfig
+    integration: "ship-docker"
+  
+  - name: ship_gcr_cli
+    type: cliConfig
+    integration: "ship-gcr"
     
   - name: ship_gke_cli
     type: cliConfig
@@ -89,22 +99,6 @@ resources:
     pointer:
       sourceName: "small-cluster"
       region: "us-east1-d"
-    
-  - name: ship_dcl_cli
-    type: cliConfig
-    integration: "ship-dcl"
-    
-  - name: ship_tripub_cli
-    type: cliConfig
-    integration: "ship-tripub"
-    
-  - name: ship_ecr_cli
-    type: cliConfig
-    integration: "ship-ecr"
-    
-  - name: ship_gcr_cli
-    type: cliConfig
-    integration: "ship-gcr"
     
   - name: ship_quay_cli
     type: cliConfig
