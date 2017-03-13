@@ -86,6 +86,7 @@ resources:
   - name: ship_gke_cli
     type: cliConfig
     integration: "ship-gke"
+    pointer:
       sourceName: "small-cluster"
       region: "us-east1-d"
     
