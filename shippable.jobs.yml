@@ -7,7 +7,7 @@ jobs:
       - IN: sample_img
       - IN: test_params      
       - TASK:
-        - script: ./IN/pipeline_scriptRepo/gitRepo/runshfail/testscript.sh
+        - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/testscript.sh
       - OUT: test_out_img
 
   - name: runsh_pre_jobscript
