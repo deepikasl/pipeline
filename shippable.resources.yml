@@ -57,6 +57,7 @@ resources:
       params:
         TEST: rc
         secure: tHZDMmSNXi7vCqpc9/BjArt5i0CKyjiz0TaFnRAvSxzUpYxWahlej6NHrzCLs+y0Oj0SE94/WdV8eYNFh7pR12h1aba1hPvO2KpOFwAzQis2Hjb6vwWvIoyLIJUaDrhF3Pd0DeqK7azMGbiwzPwPeBoBnx4qF8zZerp6L1OPFK+y+DiIx3jbJqMmoWizeAOdxb/cESxQP5P9eggCCvkHu+w1xf2jXbTLxos1PHep+MxvwOXx5mMQy/yeSU2grX5CW5BQpicH4Lz/InhKhNmXWWAK18hFtRcwS1s7DJ2bSSUne9/mYVijYtTSFwh5Uiz7YF8Y6bjMBeHlJfU+VngVjQ== #DEV=alpha
+  
   - name: notify-slack
     type: notification
     integration: "notify-slack"
@@ -64,7 +65,7 @@ resources:
       recipients:
         - "#rc-public" 
         - "#rc-private"
-        - "@shiptest-rc-me"
+        - "@shiptest-rc-ow"
 
   - name: notify-email
     type: notification
