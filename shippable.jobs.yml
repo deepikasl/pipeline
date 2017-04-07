@@ -63,8 +63,8 @@ jobs:
       - TASK: managed
      always:
       #- script: echo "This works on_always"
-      - NOTIFY: irc
+       - NOTIFY: irc
      on_success:
-      - NOTIFY: irc
+       - NOTIFY: irc
      on_failure:
-      - NOTIFY: irc
+       - NOTIFY: irc
