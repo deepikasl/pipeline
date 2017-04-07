@@ -61,6 +61,8 @@ jobs:
       - IN: ddc_cluster
       - IN: ddc_dopts
       - TASK: managed
+    on_start:
+      - NOTIFY: irc
     always:
       #- script: echo "This works on_always"
       - NOTIFY: irc
