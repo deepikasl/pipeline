@@ -15,6 +15,8 @@ jobs:
     on_start:
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
+      - NOTIFY: notify-hipchat
+      - NOTIFY: notify-irc
       - script: echo 'it is for on_start'
     steps:    
       - IN: pipeline_scriptRepo
@@ -35,6 +37,8 @@ jobs:
       - script: echo "This works on_always"
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
+      - NOTIFY: notify-hipchat
+      - NOTIFY: notify-irc
 
   - name: runcliscript
     type: runCLI
@@ -55,18 +59,24 @@ jobs:
       - IN: deploy_img       
       
   - name: deploy_ddc
-    type: deploy
+    type: deploy    
+    on_start:
+      - NOTIFY: notify-slack
+      - NOTIFY: notify-email
+      - NOTIFY: notify-hipchat
+      - NOTIFY: notify-irc
     steps:
       - IN: manifest_dep
       - IN: ddc_cluster
       - IN: ddc_dopts
-      - TASK: managed
-    on_start:
-      - NOTIFY: irc
-    always:
-      #- script: echo "This works on_always"
-      - NOTIFY: irc
-    on_success:
-      - NOTIFY: irc
+      - TASK: managed   
+    on_success:         
+      - NOTIFY: notify-slack
+      - NOTIFY: notify-email
+      - NOTIFY: notify-hipchat
+      - NOTIFY: notify-irc      
     on_failure:
-      - NOTIFY: irc
+      - NOTIFY: notify-slack
+      - NOTIFY: notify-email
+      - NOTIFY: notify-hipchat
+      - NOTIFY: notify-irc 
