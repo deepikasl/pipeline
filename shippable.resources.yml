@@ -75,6 +75,23 @@ resources:
         - shiptest.rc.ow@gmail.com
         - shiptest.rc.me@gmail.com
   
+  - name: notify-irc
+    type: notification
+    pointer:
+      method: irc
+      recipients: 
+        - "webchat.irchighway.net#test-rc"
+        - "webchat.irchighway.net#test"
+  
+  - name: notify-hipchat
+    type: notification
+    integration: "notify-hipchat"
+    pointer:
+      recipients:
+        - "#rc-public" 
+        - "#rc-private"
+        - "@shiptest-rc-ow"
+        
   - name: ship_ecr_cli
     type: cliConfig
     integration: "ship-ecr"
@@ -106,10 +123,4 @@ resources:
     type: cliConfig
     integration: "ship-quay"
     
-  - name: irc
-    type: notification
-    pointer:
-      method: irc
-      recipients: 
-        - "webchat.irchighway.net#test-rc"
-        - "webchat.irchighway.net#irc-three"
+  
