@@ -90,7 +90,7 @@ resources:
       recipients:
         - "#rc-public" 
         - "#rc-private"
-        - "@shiptest-rc-ow"
+        - "@shiptestrcow"
         
   - name: ship_ecr_cli
     type: cliConfig
