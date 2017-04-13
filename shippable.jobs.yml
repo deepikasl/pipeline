@@ -57,6 +57,7 @@ jobs:
     type: manifest
     steps:
       - IN: deploy_img       
+      - IN: t1
       
   - name: deploy_ddc
     type: deploy    
