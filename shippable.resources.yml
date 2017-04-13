@@ -10,7 +10,7 @@ resources:
     type: gitRepo
     integration: github
     pointer:
-      sourceName: "shiptest-rc-ow/pipeline_scripts"
+      sourceName: "shiptest-rc-ow/pipeline"
       branch: master
       
   - name: sample_img
