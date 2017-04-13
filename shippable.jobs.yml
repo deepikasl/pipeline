@@ -25,7 +25,7 @@ jobs:
       - IN: same_syncRepos
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh    
-        - script: ./IN/pipeline_scriptRepo/gitRepo/test/script.sh  
+        - script: ./IN/pipeline_scriptRepo/gitRepo/script.sh  
     on_success:      
       - script: echo 'test in on_success'
       - script: ls
