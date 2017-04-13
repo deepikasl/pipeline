@@ -6,7 +6,7 @@ resources:
       sourceName: "shiptest-rc-ow/pipeline_scripts"
       branch: master
   
-  - name: same_syncrepo
+  - name: same_syncRepos
     type: gitRepo
     integration: github
     pointer:
