@@ -5,7 +5,14 @@ resources:
     pointer:
       sourceName: "shiptest-rc-ow/pipeline_scripts"
       branch: master
-
+  
+  - name: same_syncrepo
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: "shiptest-rc-ow/pipeline_scripts"
+      branch: master
+      
   - name: sample_img
     type: image
     integration: ship-docker
@@ -43,9 +50,7 @@ resources:
             
   - name: ship_dh
     type: integration
-    integration: "ship-docker"
-      
-  
+    integration: "ship-docker"  
     
   - name: ship_aws
     type: integration
@@ -123,4 +128,3 @@ resources:
     type: cliConfig
     integration: "ship-quay"
     
-  
