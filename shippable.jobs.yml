@@ -21,9 +21,11 @@ jobs:
     steps:    
       - IN: pipeline_scriptRepo
         switch: off
-      - IN: runshscript        
+      - IN: runshscript   
+      - IN: same_syncRepos
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh    
+        - script: ./IN/pipeline_scriptRepo/gitRepo/test/script.sh  
     on_success:      
       - script: echo 'test in on_success'
       - script: ls
