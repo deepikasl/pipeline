@@ -3,13 +3,4 @@ triggers:
     type: trigger
     version:
       counter: 0
-      
-  - name: t2
-    type: trigger
-    version:
-      counter: 0
-
-  - name: t3
-    type: trigger
-    version:
-      counter: 0
+     
