@@ -1,0 +1,11 @@
+triggers:
+   - name: trigger1
+     type: trigger
+     version:
+       counter: 71
+       
+   - name: trigger2
+     type: trigger
+     version:
+    #  message: 'new teswt2'
+       counter: 1
