@@ -7,10 +7,10 @@ triggers:
   - name: t2runsh
     type: trigger
     version:
-      counter: 0
+      counter: 1
       
   - name: t3runcli
     type: trigger
     version:
-      counter: 0
+      counter: 1
      
