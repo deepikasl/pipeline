@@ -47,7 +47,7 @@ jobs:
   - name: runcliscript
     type: runCLI
     steps:
-      - IN: FR
+      
       - IN: pipeline_scriptRepo   
       - IN: ship_dh_cli
       - IN: ship_aws_cli
@@ -56,7 +56,7 @@ jobs:
       - IN: ship_gcr_cli
       - IN: ship_quay_cli
       - IN: t3runcli
-      - TASK:
+      #- TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runcli/accInt.sh 
         - script: printenv
         
