@@ -5,7 +5,8 @@ jobs:
       - IN: pipeline_scriptRepo
       - IN: ship_dh
       - IN: sample_img
-      - IN: test_params      
+      - IN: test_params  
+      - IN: t2runsh
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/testscript.sh
       - OUT: test_out_img
@@ -53,6 +54,7 @@ jobs:
       - IN: ship_ecr_cli
       - IN: ship_gcr_cli
       - IN: ship_quay_cli
+      - IN: t3runcli
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runcli/accInt.sh 
         - script: printenv
