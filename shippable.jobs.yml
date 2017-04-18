@@ -56,9 +56,9 @@ jobs:
       - IN: ship_gcr_cli
       - IN: ship_quay_cli
       - IN: t3runcli
-      #- TASK:
+      - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runcli/accInt.sh 
-        - script: printenv
+        - script:printenv
         
   - name: manifest_dep
     type: manifest
