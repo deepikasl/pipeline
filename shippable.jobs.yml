@@ -17,7 +17,7 @@ jobs:
       - NOTIFY: notify-email
       - NOTIFY: notify-hipchat
       - NOTIFY: notify-irc
-      - script: echo 'it is for on_start'
+      - script: echo 'it is for on_start'      
     steps:    
       - IN: pipeline_scriptRepo
         switch: off
@@ -26,6 +26,7 @@ jobs:
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh    
         - script: ./IN/same_syncRepos/gitRepo/script.sh  
+        - script: printenv
     on_success:      
       - script: echo 'test in on_success'
       - script: ls
@@ -54,6 +55,7 @@ jobs:
       - IN: ship_quay_cli
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runcli/accInt.sh 
+        - script: printenv
         
   - name: manifest_dep
     type: manifest
