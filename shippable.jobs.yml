@@ -73,6 +73,7 @@ jobs:
       - NOTIFY: notify-hipchat
       - NOTIFY: notify-irc
     steps:
+      - IN: F1
       - IN: manifest_dep
       - IN: ddc_cluster
       - IN: ddc_dopts
