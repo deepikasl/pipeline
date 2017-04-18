@@ -13,7 +13,7 @@ jobs:
 
   - name: runsh_pre_jobscript
     type: runSh
-    onstart:
+ on_start:
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
       - NOTIFY: notify-hipchat
