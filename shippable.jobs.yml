@@ -13,7 +13,7 @@ jobs:
 
   - name: runsh_pre_jobscript
     type: runSh
- on_start:
+    on_start:
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
       - NOTIFY: notify-hipchat
@@ -28,7 +28,7 @@ jobs:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh    
         - script: ./IN/same_syncRepos/gitRepo/script.sh  
         - script: printenv
-    on_success:      
+  on_success:      
       - script: echo 'test in on_success'
       - script: ls
       - script: echo 'it is success'
