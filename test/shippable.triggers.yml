@@ -3,4 +3,14 @@ triggers:
     type: trigger
     version:
       counter: 0
+      
+  - name: t2runsh
+    type: trigger
+    version:
+      counter: 0
+      
+  - name: t3runcli
+    type: trigger
+    version:
+      counter: 0
      
