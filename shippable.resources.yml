@@ -50,7 +50,7 @@ resources:
             
   - name: ship_dh
     type: integration
-    integration: "ship-docker"  
+  #  integration: "ship-docker"  
     
   - name: ship_aws
     type: integration
