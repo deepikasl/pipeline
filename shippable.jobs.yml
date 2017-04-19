@@ -7,8 +7,11 @@ jobs:
       - IN: sample_img
       - IN: test_params  
       - IN: t2runsh
+      - IN: key-values
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/testscript.sh
+        - script: echo $key1
+        - script: echo $key2
       - OUT: test_out_img
 
   - name: runsh_pre_jobscript
