@@ -127,4 +127,7 @@ resources:
   - name: ship_quay_cli
     type: cliConfig
     integration: "ship-quay"
+  - name: key-values
+    type: integration
+    integration: "ship-keyvalue"
     
