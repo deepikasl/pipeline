@@ -3,6 +3,7 @@ jobs:
     type: runSh
     steps:
       - IN: pipeline_scriptRepo
+        showBuildStatus: true
       - IN: ship_dh
       - IN: sample_img
       - IN: test_params  
