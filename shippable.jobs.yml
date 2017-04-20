@@ -64,7 +64,7 @@ jobs:
       - TASK:
         
         - script: ./IN/plscript_RepoTagsnReleases/gitRepo/runcli/accInt.sh 
-        - script: printenv
+       # - script: printenv
         - script: echo $key1
         - script: echo $key2
         
