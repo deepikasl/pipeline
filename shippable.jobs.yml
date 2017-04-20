@@ -51,7 +51,7 @@ jobs:
     type: runCLI
     steps:
       
-      - IN: pipeline_scriptRepo   
+      - IN: plscript_RepoTagsnReleases  
       - IN: ship_dh_cli
       - IN: ship_aws_cli
       - IN: ship_gke_cli
@@ -62,7 +62,7 @@ jobs:
       - IN: key-values
       - TASK:
         
-        - script: ./IN/pipeline_scriptRepo/gitRepo/runcli/accInt.sh 
+        - script: ./IN/plscript_RepoTagsnReleases/gitRepo/runcli/accInt.sh 
         - script: printenv
         - script: echo $key1
         - script: echo $key2
