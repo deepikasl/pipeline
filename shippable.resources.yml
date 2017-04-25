@@ -4,7 +4,10 @@ resources:
     integration: github
     pointer:
       sourceName: "shiptest-rc-ow/pipeline_scripts"
-      branch: master
+      branches:
+        only:
+          - master
+          - pr
       buildOnPullRequest: true
   
   - name: plscript_RepoTagsnReleases
