@@ -50,8 +50,7 @@ jobs:
 
   - name: runcliscript
     type: runCLI
-    steps:
-      
+    steps:      
       - IN: plscript_RepoTagsnReleases  
       - IN: ship_dh_cli
       - IN: ship_aws_cli
