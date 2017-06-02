@@ -17,6 +17,7 @@ jobs:
 
   - name: runsh_pre_jobscript
     type: runSh
+    allowPublicAccess: true
     on_start:
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
@@ -50,6 +51,7 @@ jobs:
 
   - name: runcliscript
     type: runCLI
+    allowPublicAccess: true
     steps:      
       - IN: plscript_RepoTagsnReleases  
       - IN: ship_dh_cli
@@ -60,13 +62,11 @@ jobs:
       - IN: ship_quay_cli
       - IN: t3runcli
       - IN: key-values
-      - TASK:
-        
+      - TASK:        
         - script: ./IN/plscript_RepoTagsnReleases/gitRepo/runcli/accInt.sh 
        # - script: printenv
         - script: echo $key1
-        - script: echo $key2
-        
+        - script: echo $key2        
         
   - name: manifest_dep
     type: manifest
