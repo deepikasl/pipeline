@@ -41,12 +41,18 @@ jobs:
       - script: echo 'testing1 failure'      
       - script: pwd
       - script: echo 'OOPS on_failure :('
-    always:
+    on_cancel:
       - script: echo "This works on_always"
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
       - NOTIFY: notify-hipchat
       - NOTIFY: notify-irc
+    #always:
+     # - script: echo "This works on_always"
+     # - NOTIFY: notify-slack
+      #- NOTIFY: notify-email
+     # - NOTIFY: notify-hipchat
+     # - NOTIFY: notify-irc
 
   - name: runcliscript
     type: runCLI
