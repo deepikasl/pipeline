@@ -25,7 +25,7 @@ jobs:
       - script: echo 'it is for on_start'      
     steps:    
       - IN: pipeline_scriptRepo
-        switch: off
+    #    switch: off
       - IN: runshscript   
       - IN: same_syncRepos
       - TASK:
