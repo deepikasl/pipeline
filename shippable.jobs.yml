@@ -90,6 +90,7 @@ jobs:
       - IN: manifest_dep
       - IN: ddc_cluster
       - IN: ddc_dopts
+      - IN: t2runsh
       - TASK: managed   
     on_success:         
       - NOTIFY: notify-slack
