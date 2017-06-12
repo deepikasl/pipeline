@@ -14,6 +14,7 @@ jobs:
         - script: echo $key1
         - script: echo $key2
       - OUT: test_out_img
+     flags: runshscript
 
   - name: runsh_pre_jobscript
     type: runSh
@@ -32,6 +33,7 @@ jobs:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh    
         - script: ./IN/same_syncRepos/gitRepo/script.sh  
         - script: printenv
+     flags: runsh_pre_jobscript
     on_success:      
       - script: echo 'test in on_success'
       - script: ls
@@ -71,13 +73,13 @@ jobs:
        # - script: printenv
         - script: echo $key1
         - script: echo $key2        
-        
+    flags: runcliscript    
   - name: manifest_dep
     type: manifest
     steps:
       - IN: deploy_img       
       - IN: t1
-      
+    flags: manifesy_dep  
   - name: deploy_ddc
     type: deploy    
     on_start:
@@ -91,7 +93,8 @@ jobs:
       - IN: ddc_cluster
       - IN: ddc_dopts
       - IN: t2runsh
-      - TASK: managed   
+      - TASK: managed
+    flags: deploy_ddc
     on_success:         
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
