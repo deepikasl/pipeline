@@ -18,6 +18,7 @@ jobs:
 
   - name: runsh_pre_jobscript
     type: runSh
+    allowPublicAccess: true
     on_start:
       - NOTIFY: notify-slack
       - NOTIFY: notify-email
@@ -32,7 +33,7 @@ jobs:
       - TASK:
         - script: ./IN/pipeline_scriptRepo/gitRepo/runsh/pre_runshjob.sh    
         - script: ./IN/same_syncRepos/gitRepo/script.sh  
-        - script: printenv
+       # - script: printenv
     flags: runsh_pre_jobscript
     on_success:      
       - script: echo 'test in on_success'
@@ -58,6 +59,7 @@ jobs:
 
   - name: runcliscript
     type: runCLI
+    allowPublicAccess: true
     steps:      
       - IN: plscript_RepoTagsnReleases  
       - IN: ship_dh_cli
@@ -73,7 +75,8 @@ jobs:
        # - script: printenv
         - script: echo $key1
         - script: echo $key2        
-    flags: runcliscript    
+    flags: runcliscript 
+    
   - name: manifest_dep
     type: manifest
     steps:
@@ -87,8 +90,7 @@ jobs:
       - NOTIFY: notify-email
       - NOTIFY: notify-hipchat
       - NOTIFY: notify-irc
-    steps:
-      
+    steps:      
       - IN: manifest_dep
       - IN: ddc_cluster
       - IN: ddc_dopts
