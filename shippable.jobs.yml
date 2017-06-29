@@ -76,7 +76,23 @@ jobs:
         - script: echo $key1
         - script: echo $key2        
     flags: runcliscript 
-    
+ 
+ 
+  - name: runcliscript2added
+    type: runCLI
+    #allowPublicAccess: true
+    steps:      
+      - IN: plscript_RepoTagsnReleases  
+      - IN: t3runcli
+      - IN: key-values
+      - TASK:        
+        - script: ./IN/plscript_RepoTagsnReleases/gitRepo/runcli/accInt.sh 
+       # - script: printenv
+        - script: echo $key1
+        - script: echo $key2        
+    flags: runcliscript 2added
+ 
+ 
   - name: manifest_dep
     type: manifest
     steps:
