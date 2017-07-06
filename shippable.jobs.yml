@@ -85,6 +85,7 @@ jobs:
       - IN: plscript_RepoTagsnReleases  
       - IN: t3runcli
       - IN: key-values
+      - IN: runsh_pre_jobscript
       - TASK:        
         - script: ./IN/plscript_RepoTagsnReleases/gitRepo/runcli/accInt.sh 
        # - script: printenv
