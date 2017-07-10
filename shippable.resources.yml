@@ -1,9 +1,9 @@
 resources:
   - name: pipeline_scriptRepo
     type: gitRepo
-    integration: github
+    integration: deepika-git
     pointer:
-      sourceName: "shiptest-rc-ow/pipeline_scripts"
+      sourceName: "deepikasl/pipeline_scripts"
       branches:
         only:
           - master
@@ -13,9 +13,9 @@ resources:
   
   - name: plscript_RepoTagsnReleases
     type: gitRepo
-    integration: github
+    integration: deepika-git
     pointer:
-      sourceName: "shiptest-rc-ow/pipeline_scripts"
+      sourceName: "deepikasl/pipeline_scripts"
       tags: 
         only:
           - v1.*
@@ -25,14 +25,14 @@ resources:
       
   - name: same_syncRepos
     type: gitRepo
-    integration: github
+    integration: deepika-git
     pointer:
-      sourceName: "shiptest-rc-ow/pipeline"
+      sourceName: "deepikasl/pipeline"
       branch: master
     flags: same_syncrepos  
   - name: sample_img
     type: image
-    integration: ship-docker
+    integration: deepika-docker
     pointer:
       sourceName: "shippabledocker/pipelinev2"
     seed:
@@ -41,7 +41,7 @@ resources:
     
   - name: deploy_img
     type: image
-    integration: ship-docker
+    integration: deepika-docker
     pointer:
       sourceName: "shippabledocker/pipelinev2"
     seed:
@@ -50,7 +50,7 @@ resources:
     
   - name: ddc_cluster
     type: cluster
-    integration: ship-ddc
+    integration: deepika-ddc
     pointer:
       sourceName : "nothing"
     flags: ddc_cluster  
@@ -63,7 +63,7 @@ resources:
     
   - name: test_out_img
     type: image
-    integration: ship-docker
+    integration: deepika-docker
     pointer:
       sourceName: "shippabledocker/ship_plv2node"
     seed:
@@ -87,12 +87,10 @@ resources:
     
   - name: notify-slack
     type: notification
-    integration: "notify-slack"
+    integration: "deepika-slack"
     pointer:
       recipients:
-        - "#rc-public" 
-        - "#rc-private"
-        - "@shiptest-rc-ow"
+        - "#deepika-test" 
     flags: slack
     
   - name: notify-email
@@ -100,8 +98,7 @@ resources:
     pointer:
       method: email
       recipients: 
-        - shiptest.rc.ow@gmail.com
-        - shiptest.rc.me@gmail.com
+        - deepika@shippable.com
     flags: email
     
   - name: notify-irc
@@ -132,28 +129,28 @@ resources:
     
   - name: ship_aws_cli
     type: cliConfig
-    integration: "ship-aws"
+    integration: "deepika-aws"
     pointer:
       region: "us-east-1"
   
   - name: ship_dh_cli
     type: cliConfig
-    integration: "ship-docker"
+    integration: "deepika-docker"
   
   - name: ship_gcr_cli
     type: cliConfig
-    integration: "ship-gcr"
+    integration: "deepika-gcr"
     
   - name: ship_gke_cli
     type: cliConfig
-    integration: "ship-gke"
+    integration: "deepika-gke"
     pointer:
       sourceName: "small-cluster"
       region: "us-east1-d"
     
   - name: ship_quay_cli
     type: cliConfig
-    integration: "ship-quay"
+    integration: "deepika-quay"
   - name: key-values
     type: integration
     integration: "ship-keyvalue"
